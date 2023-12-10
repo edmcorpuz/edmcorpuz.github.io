@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Conversion</title>
+    <link rel="stylesheet" href="ofa.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CONVERSION</h1>
+        <label for="conversion">Select conversion: </label>
+        <select id="conversion" onchange="clearResult()">
+            <option value="celsiusToFahrenheit">Celsius to Fahrenheit</option>
+            <option value="fahrenheitToCelsius">Fahrenheit to Celsius</option>
+            <option value="metersToFeet">Meters to Feet</option>
+            <option value="feetToMeters">Feet to Meters</option>
+        </select>
+        <br><br>
+        <label>Enter a number: </label>
+        <input type="text" id="number" onkeyup="convert()">
+        <br><br>
+        <label for="result">Result: </label>
+        <input type="text" id="result" readonly>
+        <h1 id="result_description"></h1>
+        <br><br>
+        <a href="index.html">Back to Home Page</a>
+        <br>
+    </div>
+
+    <script>
+        function convert() {
+            var conversionType = document.getElementById('conversion').value;
+            var number = parseFloat(document.getElementById('number').value);
+            var result = 0;
+            var message;
+
+            switch (conversionType) {
+                case 'celsiusToFahrenheit':
+                    result = (number * 1.8) + 32;
+                    message =  " °C (degree Celsius)";
+                    break;
+                case 'fahrenheitToCelsius':
+                    result = (number - 32) / 1.8;
+                    message =  " °F (degree Fahrenheit)";
+                    break;
+                case 'metersToFeet':
+                    result = number * 3.28084;
+                    if (result <= 1) {
+                        message =  " ft (Foot)";
+                    } else {
+                        message =  " ft (Feet)";
+                    }
+                    break;
+                case 'feetToMeters':
+                    result = number / 3.28084;
+                    if (result <= 1) {
+                        message =  " m (Meter)";
+                    } else {
+                        message =  " m (Meters)";
+                    }
+                    break;
+                default:
+                    result = 'Invalid conversion type';
+            }
+
+            document.getElementById('result').value = result;
+            document.getElementById('result_description').innerHTML = "The Result is" + result.toFixed(2) + message;
+        }
+
+        function clearResult() {
+            document.getElementById('result').value = '';
+        }
+    </script>
+</body>
+</html>

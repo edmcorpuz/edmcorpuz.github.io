@@ -1,0 +1,148 @@
+* {
+    margin: 2px;
+    padding: 0;
+}
+
+/* --------------------------------------------------------------------------------------------------- */
+
+body {
+    background-color:#000000;
+    color: #FFF;
+    text-align: center;
+    font-family: Bebas Neue;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    line-height: 1.42857143;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 2px;
+    display: flex;
+    align-self: center;
+}
+
+nav ul li {
+    margin-right: 0px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFF;
+    font-weight: normal;
+}
+
+li > a:hover {
+    color: #333;
+    transition: color 0.2s ease-out;
+    background-color: #FFF;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+}
+
+.dropdown-content {
+    margin-top: 21px;
+    display: none;
+    position: absolute;
+    min-width: 300px;
+    background-color: #FFF;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+li > a {
+    padding: 23px 20px;
+}
+
+.dropdown-content a {
+    color: #333;
+    font-size: 24px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    color: #FFF;
+    background-color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+h1 {
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 20px;
+    color: #FFF;
+}
+
+.div1 {
+padding-top: 40px;
+font-size: 130px;
+width: 1000px;
+height: 130px;   
+}
+
+.div2 {
+padding-left: 207px;
+font-size: 72px;
+width: 586px;
+height: 60px;   
+}
+
+.div3 {
+padding-left: 205px;
+font-size: 72px;
+width: 445px;
+height: 110px;   
+}
+
+.container {
+margin-left: 205px;
+width: 180px;
+background-color: #FFF;
+color: #FFF;
+border: 1px solid #FFF ;
+border-radius: 10px;
+}
+
+.div4 {
+width: auto;
+height: 100%;
+float: right;
+margin-top: 80px;
+margin-right: 280px;
+}
+
+.timer{
+border: 1px solid #FFF;
+color: #333;
+background-color: #FFF;
+text-align: left;
+margin-top: 160px;
+padding-left: 200px;
+}

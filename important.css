@@ -1,0 +1,16 @@
+body {
+    background-color:#000000;
+    color: #FFF;
+    text-align: center;
+    font-family: Bebas Neue;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    line-height: 1.42857143;
+    background-size: cover;
+    overflow-x: hidden;
+}
+.div1 {
+align-content: center;   
+}

@@ -1,0 +1,122 @@
+body {
+    font-family:'Bebas Neue';
+    background-color: #000000;
+    margin: 20px;
+}
+
+.container {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+    align-self: center;
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container1 {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+    align-self: center;
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container2, .container3 {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+    width: 80%;
+    margin-bottom: 20px;
+    position: relative;
+    align-self: center;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.container3 {
+    flex-grow: 1;
+}
+
+.common-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+h1 {
+    color: #333;
+    text-transform: uppercase;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+select, input, button {
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#result_description {
+    color: #4caf50;
+}
+
+#comment {
+    color: #4caf50;
+}
+
+a {
+    color: #008CBA;
+    text-decoration: none;
+    display: block;
+    margin-top: 20px;
+}
+
+a:hover {
+    color: #005580;
+}
+
+#employeeTable th, #employeeTable td {
+    padding: 10px;
+    text-align: center;
+    /* add borders */
+    border: 1px solid #ccc;
+
+}
+
+#cart {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#cart td, #cart th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#cart tr:nth-child(even){background-color: #f2f2f2;}
+#cart tr:nth-child(odd){background-color: #bfddf1;}
+
+#cart th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}

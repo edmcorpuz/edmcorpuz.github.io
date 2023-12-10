@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KIEL</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+	<link rel="icon" href="icon.ico">
+</head>
+<body>
+    <div class="content">
+        <header>
+            <div class="header-content">
+                <h1>
+                        <p>KIEL</p>
+                </h1>
+
+                 <nav>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li class="dropdown">
+                            <a href="#">ASSIGNMENTS</a>
+                            <div class="dropdown-content">
+                                <a href="conversion.html">Assignment 1: Conversion</a>
+                                <a href="income-tax.html">Assignment 2: Income Tax Calculator</a>
+                                <a href="operations.html">Assignment 3: Operations</a>
+                                <a href="simple-payroll.html">Assignment 4: Simple Payroll</a>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">MISCELLANEOUS</a>
+                            <div class="dropdown-content">
+                                <a href="grade-computation.html">Compute Grade</a>
+                                <a href="add-number.html">Add Two Numbers</a>
+                                <a href="shopping-cart.html">Shopping Cart</a>
+                            </div>
+                        </li>
+                        <li><a href="about.html">ABOUT</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <div class="div4">
+        <img src="f1c839d0b1fd57dd8ee99936bfe7ecc8_w200.gif">
+        </div>
+        
+        <div class="div1">
+        <p> CS1130, 4-328 </p>
+        </div>
+        
+        <div class="div2">
+        <p> EZEKIEL DANIEL M. CORPUZ </p>
+        </div>
+        
+        <div class="div3">
+        <p> BS-DATA SCIENCE 1A </p>
+        </div>
+        
+        <div class="container">
+        <a href="important.html"> Surprise me</a>
+        </div>
+        
+        <div class="timer">
+        <p id="demo"></p>
+
+<script>
+var countDownDate = new Date("Dec 25, 2023 00:00:00").getTime();
+var x = setInterval(function() {
+var now = new Date().getTime();
+  var distance = countDownDate - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "MERRY CHRISTMAS!!!";
+  }
+}, 1000);
+</script>
+        </div>
