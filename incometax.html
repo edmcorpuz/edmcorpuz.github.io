@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Tax Calculator</title>
+   <link rel="stylesheet" href="incometax.css">
+</head>
+<body>
+    <div id="calculator">
+        <h2>Income Tax Calculator</h2>
+        <label for="income">Annual Income (PHP):</label>
+        <input type="number" id="income" placeholder="Enter your annual income">
+        <button onclick="calculateTax()">Calculate Tax</button>
+        <button onclick="clearInput()">Clear</button>
+
+        <div id="result"></div>
+
+        <div id="deduction-info">
+            <h3>Deductions per Interval</h3>
+            <table id="deduction-table">
+                <tr>
+                    <th>Income Range (PHP)</th>
+                    <th>Deduction (PHP)</th>
+                </tr>
+                <tr>
+                    <td>0 - 500,000</td>
+                    <td>No Deductions</td>
+                </tr>
+                <tr>
+                    <td>500,001 - 1,000,000</td>
+                    <td>5,000</td>
+                </tr>
+                <tr>
+                    <td>1,000,001 - 2,000,000</td>
+                    <td>10,000</td>
+                </tr>
+                <tr>
+                    <td>Above 2,000,000</td>
+                    <td>15,000</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="real-time-rates">
+            <h3>Real-Time Rates</h3>
+            <p>Deduction Rate: 20%</p>
+        </div>
+    </div>
+
+    <script>
+        function calculateTax() {
+            var income = parseFloat(document.getElementById('income').value);
+
+            var deductions = 0;
+
+            if (income > 500000 && income <= 1000000) {
+                deductions = 5000;
+            } else if (income > 1000000 && income <= 2000000) {
+                deductions = 10000;
+            } else if (income > 2000000) {
+                deductions = 15000;
+            }
+
+            // Perform your tax calculation logic here
+            // This is a simple example, and you should replace it with your actual tax calculation formula
+
+            var tax = (income - deductions) * 0.20; // 20% flat tax rate
+
+            document.getElementById('result').innerText = "Tax to be paid: " + tax.toFixed(2) + " PHP";
+        }
+
+        function clearInput() {
+            document.getElementById('income').value = "";
+            document.getElementById('result').innerText = "";
+        }
+    </script>
+</body>
+</html>
