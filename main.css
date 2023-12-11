@@ -9,7 +9,7 @@ body {
     background-image:url(BG4.gif);
     color: #FFF;
     text-align: center;
-    font-family: Bebas Neue;
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
@@ -157,7 +157,7 @@ color: #FFF;
 }
 
         button {
-            font-family: Bebas Neue;
+            font-family: 'Bebas Neue', sans-serif;
             background-color: #FFF;
             color: #000;
             padding: 10px 20px;
