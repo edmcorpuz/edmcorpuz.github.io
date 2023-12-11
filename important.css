@@ -14,3 +14,14 @@ body {
 .div1 {
 align-content: center;   
 }
+
+ a {
+            font-size: 28px;
+            color: #4caf50;
+            text-decoration: none;
+            display: block;
+            margin-top: 20px;
+        }
+        a:hover {
+            color: #45a049;
+        }
