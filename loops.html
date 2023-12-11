@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Operations</title>
+    <link rel="stylesheet" href="loops.css">
+</head>
+<body>
+    <div id="calculator">
+        <h2>Math Operations</h2>
+        
+        <label for="operation">Select Operation:</label>
+        <select id="operation">
+            <option value="factorial">Factorial</option>
+            <option value="sum">Sum</option>
+            <option value="average">Average</option>
+        </select>
+        
+        <label for="number">Enter a Number:</label>
+        <input type="number" id="number" placeholder="Enter a number">
+
+        <button onclick="performOperation()">Compute Result</button>
+        
+        <div id="result"></div>
+        <a href="index.html">Back to Home Page</a>
+    </div>
+
+    <script>
+        function performOperation() {
+            var operationType = document.getElementById('operation').value;
+            var number = parseFloat(document.getElementById('number').value);
+            var result = 0;
+
+            switch (operationType) {
+                case 'factorial':
+                    result = computeFactorial(number);
+                    break;
+                case 'sum':
+                    result = computeSum(number);
+                    break;
+                case 'average':
+                    result = computeAverage(number);
+                    break;
+                default:
+                    result = 'Invalid Operation';
+            }
+
+            document.getElementById('result').innerText = 'Result: ' + result;
+        }
+
+        function computeFactorial(num) {
+            var result = 1;
+            while (num > 1) {
+                result *= num;
+                num--;
+            }
+            return result;
+        }
+
+        function computeSum(num) {
+            var result = 0;
+            do {
+                result += num;
+                num--;
+            } while (num > 0);
+            return result;
+        }
+
+        function computeAverage(num) {
+            var result = 0;
+            for (var i = 1; i <= num; i++) {
+                result += i;
+            }
+            return result / num;
+        }
+    </script>
+</body>
+</html>

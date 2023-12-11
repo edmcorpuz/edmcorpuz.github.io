@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll System</title>
+        <link rel="stylesheet" href="simplepayroll.css">
+
+</head>
+<body>
+    <div id="payroll-container">
+        <div id="add-employee-form">
+            <h2>Add Employee</h2>
+            <label for="employeeName">Employee Name:</label>
+            <input type="text" id="employeeName" placeholder="Enter employee name">
+
+            <label for="daysWorked">Days Worked:</label>
+            <input type="number" id="daysWorked" placeholder="Enter days worked">
+
+            <label for="dailyRate">Daily Rate:</label>
+            <input type="number" id="dailyRate" placeholder="Enter daily rate">
+
+            <label for="deductionAmount">Deduction Amount:</label>
+            <input type="number" id="deductionAmount" placeholder="Enter deduction amount">
+
+            <button onclick="addEmployee()">Add Employee</button>
+            <button id="clear-form-button" onclick="clearForm()">Clear</button>
+            <br><br>
+                    <a href="index.html">Back to Home Page</a>
+
+        </div>
+
+        <div id="payroll-list">
+            <h2>Payroll List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>Days Worked</th>
+                        <th>Daily Rate</th>
+                        <th>Deduction Amount</th>
+                        <th>Gross Pay</th>
+                        <th>Net Pay</th>
+                        <th>Other</th>
+                    </tr>
+                </thead>
+                <tbody id="employee-list"></tbody>
+            </table>
+            <button id="clear-payroll-button" onclick="openModal()">Clear Payroll List</button>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <p>Are you sure you want to clear the payroll list?</p>
+            <button class="modal-button" onclick="clearPayroll()">Yes, Clear</button>
+            <button class="modal-button" onclick="closeModal()">Cancel</button>
+        </div>
+    </div>
+
+    <script>
+        function addEmployee() {
+            var name = document.getElementById('employeeName').value;
+            var daysWorked = parseInt(document.getElementById('daysWorked').value);
+            var dailyRate = parseFloat(document.getElementById('dailyRate').value);
+            var deductionAmount = parseFloat(document.getElementById('deductionAmount').value);
+
+            var grossPay = daysWorked * dailyRate;
+            var netPay = grossPay - deductionAmount;
+
+            var employeeList = document.getElementById('employee-list');
+            var newRow = employeeList.insertRow();
+
+            var cellName = newRow.insertCell(0);
+            var cellDaysWorked = newRow.insertCell(1);
+            var cellDailyRate = newRow.insertCell(2);
+            var cellDeductionAmount = newRow.insertCell(3);
+            var cellGrossPay = newRow.insertCell(4);
+            var cellNetPay = newRow.insertCell(5);
+            var cellAction = newRow.insertCell(6);
+
+            cellName.innerHTML = name;
+            cellDaysWorked.innerHTML = daysWorked;
+            cellDailyRate.innerHTML = dailyRate.toFixed(2);
+            cellDeductionAmount.innerHTML = deductionAmount.toFixed(2);
+            cellGrossPay.innerHTML = grossPay.toFixed(2);
+            cellNetPay.innerHTML = netPay.toFixed(2);
+            cellAction.innerHTML = '<button class="delete-button" onclick="deleteEmployeeItem(this)">Delete</button>';
+        }
+
+        function deleteEmployeeItem(button) {
+            var row = button.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
+
+        function clearForm() {
+            document.getElementById('employeeName').value = '';
+            document.getElementById('daysWorked').value = '';
+            document.getElementById('dailyRate').value = '';
+            document.getElementById('deductionAmount').value = '';
+        }
+
+        function openModal() {
+            var modal = document.getElementById('myModal');
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            var modal = document.getElementById('myModal');
+            modal.style.display = 'none';
+        }
+
+        function clearPayroll() {
+            var employeeList = document.getElementById('employee-list');
+            employeeList.innerHTML = '';
+            closeModal();
+        }
+
+        window.onclick = function(event) {
+            var modal = document.getElementById('myModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        };
+    </script>
+</body>
+</html>

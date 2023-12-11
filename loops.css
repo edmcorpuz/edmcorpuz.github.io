@@ -20,7 +20,6 @@
 
         label {
             display: block;
-            margin-bottom: 8px;
         }
 
         input {
@@ -47,29 +46,6 @@
         #result {
             margin-top: 20px;
             font-weight: bold;
-        }
-
-        #deduction-info {
-            margin-top: 20px;
-            font-size: 14px;
-            text-align: left;
-        }
-
-        #deduction-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-
-        #deduction-table th, #deduction-table td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-
-        #real-time-rates {
-            margin-top: 20px;
-            font-size: 18px;
         }
         a {
             font-size: 18px;
