@@ -1,15 +1,17 @@
 body {
+    background-image:url(BG3.gif);
     font-family:'Bebas Neue';
     background-color: #000000;
     margin: 20px;
+    width: 2px;
 }
 
 .container {
     background-color: #fff;
-    padding: 50px;
+    padding: 40px;
     border-radius: 8px;
     align-self: center;
-    width: 40%;
+    width: 20%;
     position: absolute;
     top: 50%;
     left: 50%;

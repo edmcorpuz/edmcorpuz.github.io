@@ -47,14 +47,47 @@
         <p> BS-DATA SCIENCE 1A </p>
         </div>
         
-        <div class="container">
-        <a href="important.html"> Surprise me</a>
+        <div id="clicker">
+        <button onclick="randomClick()">Surprise ME</button>
         </div>
         
         <div class="timer">
         <p id="demo"></p>
 
 <script>
+    
+    function randomClick() {
+            var websites = [
+                'important.html',
+                'incometax.html',
+                'loops.html',
+                'simplepayroll.html',
+                'conversion.html',
+                'https://www.mandalagaba.com/',
+                'https://stars.chromeexperiments.com/',
+                'https://www.submarinecablemap.com/',
+                'https://www.biglongnow.com/',
+                'https://www.geo-fs.com/',
+                'https://eyebleach.me/',
+                'https://farfromhere.emmitfenn.com/',
+                'https://potatoortomato.com/',
+                'https://www.brainyquote.com/quote_of_the_day',
+                'https://wikitrivia.tomjwatson.com/',
+                'https://www.cleverbot.com/',
+                'https://scaleofuniverse.com/en',
+                'https://www.ocearch.org/tracker/?list=',
+                'https://www.isitnormal.com/',
+                'https://www.autodraw.com/',
+                'https://asoftmurmur.com/',
+                'https://www.futureme.org/',
+                'http://www.flashbynight.com/drench/',
+                'https://strobe.cool/',
+            ];
+
+            var randomIndex = Math.floor(Math.random() * websites.length);
+
+            window.location.href = websites[randomIndex];
+        }
 var countDownDate = new Date("Dec 25, 2023 00:00:00").getTime();
 var x = setInterval(function() {
 var now = new Date().getTime();
